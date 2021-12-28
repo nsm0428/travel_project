@@ -323,7 +323,12 @@
 </table>
 		
 	<div class="qna_write_btn_div" align="left">
-		<button type="button" onclick="location.href='${contextPath}/qna/writeForm'">문의하기</button> 
+		<c:if test="${ adminId != null }">
+			<button type="button" onclick="location.href='${contextPath}/qna/writeForm'">공지하기</button> 
+		</c:if>
+		<c:if test="${ adminId == null }">
+			<button type="button" onclick="location.href='${contextPath}/qna/writeForm'">문의하기</button> 
+		</c:if>
 	</div>
 		
 	<div class="page_wrap">

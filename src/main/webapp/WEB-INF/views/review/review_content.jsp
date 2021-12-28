@@ -381,7 +381,7 @@
 				<td align="right">
 					<c:if test="${contentData.id == userId }">
 						<input type="button" value="삭제" onclick="delete_check();">
-						<input type="button" value="modify" onclick="location.href='${contextPath}/review/review_modify?review_no=${contentData.review_no }'">
+						<input type="button" value="수정" onclick="location.href='${contextPath}/review/review_modify?review_no=${contentData.review_no }'">
 					</c:if>
 				</td>
 			</tr>

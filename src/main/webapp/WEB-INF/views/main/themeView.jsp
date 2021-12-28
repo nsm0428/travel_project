@@ -302,7 +302,7 @@ function setImageNext(){
 		    <input type="hidden" name="imageFile1" value="${dto.imageFile1 }">    
 		    <input type="hidden" name="imageFile2" value="${dto.imageFile2 }">    
 
-		    <c:if test="${ adminid != null }">
+		    <c:if test="${ adminId != null }">
 			    <input type="submit" value="삭제하기">
 		    </c:if>
           </form>
