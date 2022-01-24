@@ -26,10 +26,14 @@
 			}else{
 				var file = input.files[0]
 				   
-			   	var str_file = "<input type='file' id='review_file_"+photo_num+"' name='review_file_"+photo_num+"' onchange='add_list(this)'/>"
+			   	var str_file = "<input type='file' id='review_file_"+photo_num+"' "
+			   		+ "name='review_file_"+photo_num+"' onchange='add_list(this)'/>"
 			   
-			  	var str_photo = "<p><img id='review_file_name_"+(photo_num -1)+"' name='review_file_name_"+(photo_num -1)+"' style='align:right;' src='#' width='320px' height='180px'> "
-				    + "<b>" + file.name + " </b> <a href='#' id='delete' onClick='photo_count--; $(this).parent().remove(); $(review_file_"+(photo_num -2)+").remove(); $(photo_count).val("+photo_count+"); '>삭제하기</a></p>"
+			  	var str_photo = "<p><img id='review_file_name_"+(photo_num -1)+"' "
+			  		+ "name='review_file_name_"+(photo_num -1)+"' style='align:right;' "
+			  		+ "src='#' width='320px' height='180px'><b>" + file.name + " </b> "
+			  		+ "<a href='#' id='delete' onClick='photo_count--; $(this).parent().remove(); "
+				    + "$(review_file_"+(photo_num -2)+").remove(); $(photo_count).val("+photo_count+"); '>삭제하기</a></p>"
 			   	
 			   	$("#photo_div").append(str_photo)
 			   

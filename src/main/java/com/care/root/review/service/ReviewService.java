@@ -33,13 +33,13 @@ public interface ReviewService {
    public void updateReplyCount(int r_write_group);//댓글 수 
    
    // 좋아요 구현
-   public void updateLike(int review_no);
-   public void updateLikeCancel(int review_no);
+   public void updateLike(int review_no);//좋아요 업데이트
+   public void updateLikeCancel(int review_no);//좋아요 취소 업데이트
    
-   public void insertLike(int review_no, String id);
-   public void deleteLike(int review_no, String id);
+   public void insertLike(int review_no, String id);//좋아요 입력
+   public void deleteLike(int review_no, String id);//좋아요 삭제
    
-   public int likeCheck(int review_no, String id);
-   public void updateLikeCheck(int review_no, String id);
-   public void updateLikeCheckCancel(int review_no, String id);
+   public int likeCheck(int review_no, String id);//좋아요 확인
+   public void updateLikeCheck(int review_no, String id);//좋아요 업데이트 확인
+   public void updateLikeCheckCancel(int review_no, String id);//좋아요 업데이트 확인 취소
 }
