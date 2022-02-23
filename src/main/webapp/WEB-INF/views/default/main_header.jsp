@@ -72,7 +72,7 @@ text-align: center; padding-top:0px  }
 </head> 
 <body >
 	<div class="wrapp">
-    <div><img src="${contextPath}/resources/img/traduler-logo.png" width="20%" style="margin-top: 30px;"></div> 
+    <div><img src="${contextPath}/resources/img/traduler-logo-green.png" width="20%" style="margin-top: 30px;"></div> 
 	<header id="header">
 		<nav>
 			<ul>
