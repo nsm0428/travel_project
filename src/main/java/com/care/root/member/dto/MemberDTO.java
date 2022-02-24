@@ -13,6 +13,7 @@ public class MemberDTO {
 	private String phoneNumber;
 	private Date registerDate;
 	private Date limitTime;
+	private int admin;
 	
 	
 	public Date getRegisterDate() {
@@ -20,6 +21,12 @@ public class MemberDTO {
 	}
 	public void setRegisterDate(Date registerDate) {
 		this.registerDate = registerDate;
+	}
+	public int getAdmin() {
+		return admin;
+	}
+	public void setAdmin(int admin) {
+		this.admin = admin;
 	}
 	public Date getLimitTime() {
 		return limitTime;
