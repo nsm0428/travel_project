@@ -18,7 +18,10 @@
 		
 	</resultMap>
 	<select id="memberAllList" resultMap="member">
-		select * from member
+		select * from member where traduler_admin != 1
+	</select>
+	<select id="adminAllList" resultMap="member">
+		select * from member where traduler_admin = 1
 	</select>
 	<insert id="registerWrite">
 		insert into member(id, pw, addr1, addr2, addr3, email, phone_number, session_id) 

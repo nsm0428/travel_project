@@ -1,5 +1,7 @@
 package com.care.root.member.service;
 
+import java.util.ArrayList;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -17,11 +19,21 @@ public class MemberServiceImpl implements MemberService{
 	}
 	
 
+//	@Override
+//	public ArrayList<MemberDTO> memberAllList() {
+//		return mapper.memberAllList();
+//	}
+//	
+//	@Override
+//	public ArrayList<MemberDTO> adminAllList() {
+//		return mapper.adminAllList();
+//	}
+	
 	@Override
 	public void memberAllList(Model model) {
-		model.addAttribute("memberList",mapper.memberAllList());
-		
+		model.addAttribute("memberList", mapper.memberAllList());
 	}
+
 
 	@Override
 	public int registerWrite(MemberDTO dto) {

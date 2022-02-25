@@ -1,5 +1,7 @@
 package com.care.root.member.controller;
 
+import java.util.ArrayList;
+
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
@@ -21,11 +23,23 @@ import com.care.root.member.service.MemberService;
 public class MemberController implements SessionCommonName{
 	@Autowired MemberService ms;
 	
-	@GetMapping("memberInfo")
-	public String memberInfo(Model model) {
+	@GetMapping("memberAllInfo")
+	public String memberAllList(Model model) {
 		ms.memberAllList(model);
 		return "member/memberAllList";
 	}
+	
+//	@GetMapping(value="getMemberInfo", produces="application/json; charset=utf-8")
+//	public ArrayList<MemberDTO> memberInfo() {
+//		MemberDTO dto = new MemberDTO();
+//		return ms.memberAllList();
+//	}
+//	
+//	@GetMapping(value="getAdminInfo", produces="application/json; charset=utf-8") 
+//	public ArrayList<MemberDTO> adminInfo() {
+//		MemberDTO dto = new MemberDTO();
+//		return ms.adminAllList();
+//	}
 	
 	@GetMapping("registerForm")
 	public String registerForm() {

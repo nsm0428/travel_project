@@ -128,6 +128,7 @@ public class ReviewController {
 		// 로직 처리 후 likeCheck 값 넘김
 		return likeCheck;
 	}
+	
 	@GetMapping("review_delete")
 	public void review_delete(@RequestParam("review_no") int review_no,
 			HttpServletResponse response,
@@ -140,4 +141,5 @@ public class ReviewController {
 		out = response.getWriter();
 		out.println(delete_check);
 	}
+
 }
