@@ -23,23 +23,12 @@ import com.care.root.member.service.MemberService;
 public class MemberController implements SessionCommonName{
 	@Autowired MemberService ms;
 	
-	@GetMapping("memberAllInfo")
+	@GetMapping("memberInfo")
 	public String memberAllList(Model model) {
 		ms.memberAllList(model);
+		ms.adminAllList(model);
 		return "member/memberAllList";
 	}
-	
-//	@GetMapping(value="getMemberInfo", produces="application/json; charset=utf-8")
-//	public ArrayList<MemberDTO> memberInfo() {
-//		MemberDTO dto = new MemberDTO();
-//		return ms.memberAllList();
-//	}
-//	
-//	@GetMapping(value="getAdminInfo", produces="application/json; charset=utf-8") 
-//	public ArrayList<MemberDTO> adminInfo() {
-//		MemberDTO dto = new MemberDTO();
-//		return ms.adminAllList();
-//	}
 	
 	@GetMapping("registerForm")
 	public String registerForm() {

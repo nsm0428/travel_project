@@ -10,7 +10,7 @@ import com.care.root.member.dto.MemberDTO;
 public interface MemberService {
 	public void memberAllList(Model model);
 //	public ArrayList<MemberDTO> memberAllList(); //회원 전체 보기기능
-//	public ArrayList<MemberDTO> adminAllList(); //관리자 전체 보기 기능
+	public void adminAllList(Model model); //관리자 전체 보기 기능
 	public int registerWrite(MemberDTO dto); //회원 가입 기능
 	public void memberView(String id, Model model); //회원 조회 기능
 	public void memberDelete(String id); //회원 삭제 기능 

@@ -86,7 +86,7 @@ text-align: center; padding-top:0px  }
 		<ul>
 			<li><a href="${contextPath }/index">HOME</a></li>
 			<c:if test="${adminId != null }">
-				<li><a href="${contextPath }/member/memberAllInfo">회원 정보</a></li>
+				<li><a href="${contextPath }/member/memberInfo">회원 정보</a></li>
 			</c:if>
 			<c:choose>
 				<c:when test="${userId == null && adminId == null }">

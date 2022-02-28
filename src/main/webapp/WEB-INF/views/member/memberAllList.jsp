@@ -9,37 +9,16 @@
 <title>Insert title here</title>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script>
-	
+	$()
 	/* function으로 일반회원 페이지 출력하는 기능, 관리자 페이지 출력하는 기능 구현 */
-	/* function memberInfo(){
-		$.ajax({
-			url : "getMemberInfo",
-			type : "GET",
-			dataType : "json",
-			success : function(data){
-				alert("일반회원 목록 불러오기 성공")
-			},
-			eroor : function(){
-				alert("일반회원 목록 불러오기 실패")
-			}
-			
-		})
+	function memberInfo(){
+		$("#admin_table").attr('style', 'display:none;');
+		$("#member_table").removeAttr('style')
 	}
 	function adminInfo(){
-		$.ajax({
-			url : "getAdminInfo",
-			type : "GET",
-			dataType : "json",
-			success : function(data){
-				alert("관리자 목록 불러오기 성공")
-			},
-			eroor : function(){
-				alert("관리자 목록 불러오기 실패")
-			}
-			
-		})
+		$("#member_table").attr('style', 'display:none;');
+		$("#admin_table").removeAttr('style')
 	}
-	 */
 	/* function updateAdmin(){
 		$.ajax({
 			url : "updateAdmin",
@@ -66,8 +45,23 @@
 	<input type="button" value="일반회원" onclick="memberInfo();">
 	<input type="button" value="관리자" onclick="adminInfo();">	
 </div>
-<%-- <c:if test="${ }"> --%>
+<div id="admin_table" style="display:none;">
+	<h1><b>관리자 테이블</b></h1>
+	<table border="1">
+		<tr>
+			<td>id</td> <td>pw</td> <td>email</td> <td>phoneNumber</td>
+		</tr>
+		<c:forEach items="${adminList }" var="list"><!-- 현재 모델이 아니기때문에 못불러오고있다. -->
+		<tr>
+			<th>
+				<a href="${contextPath }/member/memberView?id=${list.id }">${list.id }</a>
+			</th> <th>${list.pw }</th> <th>${list.email }</th> <th>${list.phoneNumber }</th>
+		</tr>
+		</c:forEach>
+	</table>
+</div>
 <div id="member_table">
+	<h1><b>일반회원 테이블</b></h1>
 	<table border="1">
 		<tr>
 			<td>id</td> <td>pw</td> <td>email</td> <td>phoneNumber</td>
@@ -80,10 +74,8 @@
 		</tr>
 		</c:forEach>
 	</table>
-<%-- </c:if> --%>
 </div>
 <c:import url="../default/footer.jsp"/>
-
 
 </body>
 </html>

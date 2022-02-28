@@ -24,10 +24,10 @@ public class MemberServiceImpl implements MemberService{
 //		return mapper.memberAllList();
 //	}
 //	
-//	@Override
-//	public ArrayList<MemberDTO> adminAllList() {
-//		return mapper.adminAllList();
-//	}
+	@Override
+	public void adminAllList(Model model) {
+		model.addAttribute("adminList", mapper.adminAllList());
+	}
 	
 	@Override
 	public void memberAllList(Model model) {
