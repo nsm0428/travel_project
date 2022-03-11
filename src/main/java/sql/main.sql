@@ -28,3 +28,8 @@ id varchar2(30),
 likeHit number default 0,
 savedate date default sysdate
 );
+
+create table main_like(
+rep_no number,
+id varchar2(30)
+);
